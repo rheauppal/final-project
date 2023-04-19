@@ -1,0 +1,250 @@
+/*
+- change nav bar when less than given 
+- change grid when more than given because
+- add javascript to grid, add click
+- make flex,  
+extras- forms, javascript,  */
+body {
+    background-color: #dae1be;
+    font-family: 'Nunito',"Times New Roman", Times, serif;
+    color: #222222;
+  }
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 50px;
+    font-weight: bold;
+    font-size: 150%;
+  }
+  
+  .header-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header-left h1 {
+    margin: 0;
+  }
+ 
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    display: inline-block;
+  }
+  
+  nav a {
+    color: #555555;
+    margin-left: 25px;
+    text-decoration: none;
+  }
+  
+  nav a:hover {
+    color: #222222;
+    font-weight: bold;
+  }
+
+  nav ul li a.current-page {
+    font-weight: bold;
+    text-decoration: underline;
+    color:#000;
+  }
+ 
+  .about-content {
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    height:100%;
+  }
+  
+  .about-left {
+    width: 50%;
+  }
+  
+  .about-left img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .about-right {
+    width: 50%;
+    padding-left: 40px;
+  }
+    h2 {
+    font-size: 200%;
+    margin-bottom: 20px;
+  }
+  .about-right p {
+    font-size: 100%;
+    line-height: 1.5;
+  }
+
+
+  /*section{
+    height: 100vh;
+  }
+*/
+  .heading{
+    text-align: center;
+  }
+
+  #welham-pic{
+    width: 50%;
+    height: 50%;
+  }
+
+  /*footer*/
+  footer {
+    background-color: #333;
+    color: #dae1be;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .contact-form {
+    display: inline-block;
+    text-align: left;
+    width:60%;
+  }
+  
+  .contact-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+  }
+  
+  .contact-form label {
+    margin-bottom: 5px;
+  }
+  
+  .contact-form input[type="text"],
+  .contact-form input[type="email"],
+  .contact-form textarea {
+    padding: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+  }
+  
+  .contact-form textarea {
+    height: 100px;
+  }
+  
+  .contact-form input[type="submit"] {
+    background-color: #fff;
+    color: #333;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  .contact-form input[type="submit"]:hover {
+    background-color: #dae1be;
+  }
+
+  /*PHOTOGRAPHY PAGE*/
+  .pictures{
+    display: grid;
+    grid-gap:10px;
+    margin:20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 1250px;
+    overflow:hidden;
+  }
+
+  .pictures .images {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+  }
+  .pictures img{
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .pictures :nth-child(4n){
+    grid-column: 1/-1;
+  }
+  
+  @media screen and (min-width:850px) {
+    /* make the bigger one smaller, and change the order*/
+
+    
+  }
+  /*to make sure tag it is on is highlighted*/
+  nav a.active{
+    text-decoration: underline;
+    color: #222222;
+  } 
+  
+
+
+  /*skip class */
+  .skip-link{
+    position:relative;
+    top:-40px;
+  }  
+  /*for focus for skiplink*/
+  .skip-link:focus{
+    position:relative;
+    top:20px;
+  }
+
+  /*fashion page*/
+  .img-fluid {
+    height: 300px;
+    object-fit: cover;
+    width: 200px;
+    object-fit: cover;
+    padding-bottom: 20px;
+  }
+  
+  .row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .portfolio-link:hover img {
+    transform: scale(1.1);
+    transition: transform 0.5s ease-in-out;
+    opacity: 0.2;
+  }
+  
+  .portfolio-link {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .portfolio-link:hover::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-weight: bold;
+    color: #000000;
+    text-shadow: 1px 1px #333;
+  }
+  
+  @media (max-width: 800px) {
+    .portfolio-link:hover::before {
+      font-size: 16px;
+    }
+  }
