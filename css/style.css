@@ -7,7 +7,7 @@ extras- forms, javascript,  */
 body {
     background-color: #dae1be;
     font-family: 'Nunito',"Times New Roman", Times, serif;
-    color: #222222;
+    color: #333;
   }
 header {
     display: flex;
@@ -16,7 +16,7 @@ header {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 50px;
     font-weight: bold;
-    font-size: 150%;
+    font-size: 150%
   }
   
   .header-left {
@@ -29,7 +29,6 @@ header {
   }
  
   nav ul {
-    list-style: none;
     margin: 0;
     padding: 0;
   }
@@ -45,16 +44,28 @@ header {
   }
   
   nav a:hover {
-    color: #222222;
-    font-weight: bold;
-  }
-
-  nav ul li a.current-page {
+    color: #333;
     font-weight: bold;
     text-decoration: underline;
-    color:#000;
   }
- 
+
+  nav a.active{
+    transform: scale(1.5);
+    transition: transform 0.5s ease-in-out;
+    font-family: "Times new roman";
+    color: #800080;
+  } 
+ @media screen and (max-width:600px){
+  
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  nav{
+    margin-top: 10px;
+  }
+ }
   .about-content {
     padding: 40px;
     max-width: 1200px;
@@ -88,17 +99,74 @@ header {
   }
 
 
-  /*section{
-    height: 100vh;
+  /*flex for projects*/
+  .projects{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 7%;
   }
-*/
-  .heading{
+  .project-h2,.fashion-h2{
+    text-align: center;
+    font-weight: bold;
+    
+  }
+  .project-engr{
+    border: 1px solid purple;
+    border-radius: 0.5rem;
+    background-color: #F5F5DC;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);;
+    max-height:400px;
+    margin:3%;
+    padding: 3%;
+  }
+  h3 {
+    font-size: 120%;
+    margin: 0.5rem;
+    color: purple;
     text-align: center;
   }
+  .project-engr ul{
+    margin-left:5%;
+    line-height: 1.2;
 
-  #welham-pic{
-    width: 50%;
-    height: 50%;
+  }
+  
+  @media screen and (min-width:700px){
+    .projects {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .project-engr {
+      min-width: 300px;
+      margin-bottom: 20px;
+      flex: 1 0 30%; /* add this to make all blocks have the same width */
+      min-height: 265px; 
+    }
+  }
+
+  @media screen and (min-width:850px) {
+    .projects {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
+      
+    }
+    /*change media screen */ 
+    .project-engr{
+      width:20px;
+      min-height: 0px;
+      min-width: 0px;
+    }
+
+     
   }
 
   /*footer*/
@@ -141,14 +209,14 @@ header {
   }
   
   .contact-form input[type="submit"] {
-    background-color: #fff;
+    background-color: #F5F5DC;
     color: #333;
     padding: 5px 10px;
     border-radius: 5px;
   }
   
   .contact-form input[type="submit"]:hover {
-    background-color: #dae1be;
+    background-color: F5F5DC;
   }
 
   /*PHOTOGRAPHY PAGE*/
@@ -159,6 +227,7 @@ header {
     grid-template-columns: 1fr 1fr 1fr;
     max-width: 1250px;
     overflow:hidden;
+    width: cover;
   }
 
   .pictures .images {
@@ -177,17 +246,13 @@ header {
   .pictures :nth-child(4n){
     grid-column: 1/-1;
   }
-  
-  @media screen and (min-width:850px) {
-    /* make the bigger one smaller, and change the order*/
 
-    
-  }
+  
+  
+  
+ 
   /*to make sure tag it is on is highlighted*/
-  nav a.active{
-    text-decoration: underline;
-    color: #222222;
-  } 
+  
   
 
 
@@ -203,14 +268,7 @@ header {
   }
 
   /*fashion page*/
-  .img-fluid {
-    height: 300px;
-    object-fit: cover;
-    width: 200px;
-    object-fit: cover;
-    padding-bottom: 20px;
-  }
-  
+  /*
   .row {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -239,12 +297,79 @@ header {
     transform: translate(-50%, -50%);
     font-size: 24px;
     font-weight: bold;
-    color: #000000;
+    color: purple;
     text-shadow: 1px 1px #333;
   }
-  
+  */
   @media (max-width: 800px) {
     .portfolio-link:hover::before {
       font-size: 16px;
     }
   }
+
+/*button*/
+#myButton, #pics1 {
+  background-color: #333;
+  border: none;
+  color: #dae1be;
+  padding: 12px 24px;
+  text-align: center;
+  font-size: 80%;
+  cursor: pointer;
+  margin: 0 auto 10px auto;
+  display: block;
+}
+
+.fashion-h2{
+  margin: 3%;
+  font-size: 200%;
+}
+
+.fashion-board{
+  display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    margin:50px;
+    justify-content: center;
+    align-items: center;
+}
+
+/*.img-fluid {
+  height: 300px;
+  object-fit: cover;
+  width: 200px;
+  object-fit: cover;
+  padding-bottom: 20px;
+}
+*/
+.img-fluid{
+  height:300px;
+  width:200px;
+  object-fit: cover;
+  padding-bottom: 20px;
+}
+.fashion-board:nth-child(3n){
+    height: 500px;
+}
+.fashion-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.one {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    margin:50px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+
+

@@ -28,32 +28,63 @@
 </header>
 <main id="main-content" tabindex="1">
 <section>
-  <div class="about-content">
+  <div class="about-content" tabindex="1">
     <div class="about-left">
       <img src="images/rheauppal1.jpg" alt="A picture of Rhea Uppal">
     </div>
     <div class="about-right">
       <h2>About Me</h2>
-      <p>Hi, my name is Rhea Uppal and I am a sophomore studying Computer Science with a minor in User Experience Design at the University of Michigan. I am currently looking for roles as a software engineering intern. </p>
+      <p>Hi, my name is Rhea Uppal and I am a sophomore studying Computer Science at the University of Michigan. This website also consists of ome fashion fits I use as inspiration and my photography</p>
     </div>
   </div>
 </section>
 <section>
-  <div>
-    
+  <h2 class="project-h2">My Projects</h2>
+  <div class="projects">
+    <div class="project-engr" tabindex="1">
+      <h3>Tech Consultant at ITS</h3>
+      <ul>
+        <li>Working on TeamDynamix ticketing system to troubleshoot customer care problems, providing classroom support</li>
+        <li> Managing onboarding and offboarding of employees at UofM by giving each person customized internal access</li>
+        <li>Installing UofM specific softwares for the library, formulating and designing computer systems using structured analysis and asset management </li>
+      </ul>
+    </div>
+    <div class="project-engr" tabindex="1">
+      <h3>Developer at Michigan Data Science Team</h3>
+      <ul>
+        <li>Improving the efficiency of the Universitys bus transportation services, specifically the Magic Bus apps by collecting and analyzing data on bus routes, timings, frequencies and speeds to avoid bus “clumping”</li>
+        <li>Executing the algorithm temporarily on the bus system with the help of UofM transportation </li>
+      </ul>
+    </div>
+    <div class="project-engr" tabindex="1">
+      <h3>Intern at SmartBridge Inc.</h3>
+      <ul>
+        <li>Implemented algorithms like Naive Bayes to create a 73% effective ML model and integrated python code with html-css to display the model in an interactive survey styled website</li>
+        <li>Analyzed and tracked data to build a model predicting if an employee will leave in the upcoming year while identifying different trends
+        </li>
+      </ul> 
+    </div>
+    <div class="project-engr" tabindex="1">
+      <h3>Tech Consultant at FundsTiger</h3>
+      <ul>
+        <li>Wrote several articles on student loans and study abroad loans for the company's welfare section on the website</li>
+        <li>Developed and reviewed the android application for the FundsTiger app by suggesting critical UI/UX improvements</li>
+        <li>Strategized with the companys marketing team to develop web content to increase app traffic by 20%</li>
+      </ul>         
+    </div>
   </div>
 </section>
 </main>
 
 <!-- check footer again -->
-<footer>
+<footer tabindex="1">
   <div class="contact-form">
-    <h2>Contact Us</h2>
-    <form action="#">
+    <h2>Contact Me</h2>
+    <form action="https://formspree.io/f/xjvdegeq">
       <label for="name">Name:</label>
-      <input type="text" id="name" name="name">
+      <input type="text" id="name" name="name" required>
       <label for="email">Email:</label>
-      <input type="email" id="email" name="email">
+      <input type="email" id="email" name="email" required >
       <label for="query">Anything you want to say:</label>
       <textarea id="Add your comments" name="questions"></textarea>
       <input type="submit" value="Submit">
